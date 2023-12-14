@@ -1,0 +1,19 @@
+C:\Users\aorizondo\source\repos\ETL Manager\bin\Debug\ETL Manager.exe.config
+C:\Users\aorizondo\source\repos\ETL Manager\bin\Debug\ETL Manager.exe
+C:\Users\aorizondo\source\repos\ETL Manager\bin\Debug\ETL Manager.pdb
+C:\Users\aorizondo\source\repos\ETL Manager\obj\Debug\ETL Manager.csproj.AssemblyReference.cache
+C:\Users\aorizondo\source\repos\ETL Manager\obj\Debug\ETL_Manager.Properties.Resources.resources
+C:\Users\aorizondo\source\repos\ETL Manager\obj\Debug\ETL Manager.csproj.GenerateResource.cache
+C:\Users\aorizondo\source\repos\ETL Manager\obj\Debug\ETL Manager.csproj.CoreCompileInputs.cache
+C:\Users\aorizondo\source\repos\ETL Manager\obj\Debug\ETL Manager.exe
+C:\Users\aorizondo\source\repos\ETL Manager\obj\Debug\ETL Manager.pdb
+C:\Users\aorizondo\source\repos\ETL Manager\obj\Debug\ETL_Manager.FormLogs.resources
+C:\Users\aorizondo\source\repos\ETL Manager\obj\Debug\ETL_Manager.MainForm.resources
+C:\Users\aorizondo\source\repos\ETL Manager\bin\Debug\LiveCharts.dll
+C:\Users\aorizondo\source\repos\ETL Manager\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\aorizondo\source\repos\ETL Manager\bin\Debug\LiveCharts.pdb
+C:\Users\aorizondo\source\repos\ETL Manager\bin\Debug\LiveCharts.xml
+C:\Users\aorizondo\source\repos\ETL Manager\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\aorizondo\source\repos\ETL Manager\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\aorizondo\source\repos\ETL Manager\obj\Debug\ETL Manager.csproj.CopyComplete
+C:\Users\aorizondo\source\repos\ETL Manager\obj\Debug\ETL_Manager.FormConfig.resources
