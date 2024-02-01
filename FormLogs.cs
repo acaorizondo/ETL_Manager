@@ -18,14 +18,16 @@ namespace ETL_Manager
     public partial class FormLogs : Form
     {
        DataView dv;
+       DataView dvValidateETLProcess;
        DataView dv_auditStats;
        public FormLogs()
         {
             InitializeComponent();
             this.v_AuditStatsTableAdapter = new DWH_TestDataSetTableAdapters.v_AuditStatsTableAdapter();
             this.v_ETL_ExecTimeTableAdapter = new DWH_TestDataSetTableAdapters.v_ETL_ExecTimeTableAdapter();
+            
             this.InitializeCheckedListBox();
-        
+            tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
         }
 
         private void InitializeCheckedListBox()
@@ -95,7 +97,27 @@ namespace ETL_Manager
             }
         }
 
+        private void FilldGVRowDifference()
+        {
+            // Establecer negrita para los encabezados de las columnas
+            foreach (DataGridViewColumn col in dGV_RowDifference.Columns)
+            {
+                col.HeaderCell.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            }
+            dGV_RowDifference.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dGV_RowDifference.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dGV_RowDifference.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
+            dGV_RowDifference.Columns[1].DefaultCellStyle.Format = "N0";
+            dGV_RowDifference.Columns[2].DefaultCellStyle.Format = "N0";
+            dGV_RowDifference.Columns[3].DefaultCellStyle.Format = "N0";
+
+            dGV_RowDifference.Columns[1].HeaderText = "Row count in Source";
+            dGV_RowDifference.Columns[2].HeaderText = "Row count in Fact Table";
+            dGV_RowDifference.Columns[3].HeaderText = "Row difference";
+
+            dGV_RowDifference.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
 
 
         private void fillDataGrid()
@@ -157,7 +179,15 @@ namespace ETL_Manager
 
             column = dataGridView1.Columns.Cast<DataGridViewColumn>()
                                               .FirstOrDefault(c => c.DataPropertyName == "TableMaxDateTime");
-            column.HeaderText = "Max DateTime";
+            column.HeaderText = "Max Date";
+
+            // Establecer negrita para los encabezados de las columnas
+            foreach (DataGridViewColumn col in dataGridView1.Columns)
+            {
+                col.HeaderCell.Style.Font = new System.Drawing.Font(dataGridView1.Font, System.Drawing.FontStyle.Bold);
+            }
+
+
 
         }
 
@@ -191,6 +221,109 @@ namespace ETL_Manager
             // Ajustar el ancho de las columnas al contenido
             dGV_FactTablesGrowth.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
+
+        private void fillDataGridViewETLValidation()
+        {
+            // Desactivar la selección predeterminada
+            this.dgvETLValidation.ClearSelection();
+
+            dvValidateETLProcess = new DataView(this.dWH_TestDataSet.v_ValidateETLProcess);
+            this.dgvETLValidation.DataSource = dvValidateETLProcess;
+            this.dgvETLValidation.Columns["Date"].Visible = false;
+            this.dgvETLValidation.Columns["Warnings"].Visible = false;
+            this.dgvETLValidation.Columns["Validation"].Visible = false;
+
+            this.dgvETLValidation.Columns["Database"].HeaderCell.Style.Font = new Font(dataGridView1.Font, FontStyle.Bold);
+            this.dgvETLValidation.Columns["Type"].HeaderCell.Style.Font = new Font(dataGridView1.Font, FontStyle.Bold);
+            this.dgvETLValidation.Columns["Datamart"].HeaderCell.Style.Font = new Font(dataGridView1.Font, FontStyle.Bold);
+
+            this.dgvETLValidation.Columns["Table"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvETLValidation.Columns["Table"].HeaderCell.Style.Font = new Font(dataGridView1.Font, FontStyle.Bold);
+
+            this.dgvETLValidation.Columns["Initial"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dgvETLValidation.Columns["Initial"].HeaderCell.Style.Font = new Font(dataGridView1.Font, FontStyle.Bold);
+            this.dgvETLValidation.Columns["Initial"].DefaultCellStyle.Format = "N0";
+
+            this.dgvETLValidation.Columns["Extracted"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dgvETLValidation.Columns["Extracted"].HeaderCell.Style.Font = new Font(dataGridView1.Font, FontStyle.Bold);
+            this.dgvETLValidation.Columns["Extracted"].DefaultCellStyle.Format = "N0";
+
+            this.dgvETLValidation.Columns["Filtered"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dgvETLValidation.Columns["Filtered"].HeaderCell.Style.Font = new Font(dataGridView1.Font, FontStyle.Bold);
+            this.dgvETLValidation.Columns["Filtered"].DefaultCellStyle.Format = "N0";
+
+            this.dgvETLValidation.Columns["Inserted"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dgvETLValidation.Columns["Inserted"].HeaderCell.Style.Font = new Font(dataGridView1.Font, FontStyle.Bold);
+            this.dgvETLValidation.Columns["Inserted"].DefaultCellStyle.Format = "N0";
+
+            this.dgvETLValidation.Columns["Updated"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dgvETLValidation.Columns["Updated"].HeaderCell.Style.Font = new Font(dataGridView1.Font, FontStyle.Bold);
+            this.dgvETLValidation.Columns["Updated"].DefaultCellStyle.Format = "N0";
+
+            this.dgvETLValidation.Columns["Deleted"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dgvETLValidation.Columns["Deleted"].HeaderCell.Style.Font = new Font(dataGridView1.Font, FontStyle.Bold);
+            this.dgvETLValidation.Columns["Deleted"].DefaultCellStyle.Format = "N0";
+
+            this.dgvETLValidation.Columns["Errors"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dgvETLValidation.Columns["Errors"].HeaderCell.Style.Font = new Font(dataGridView1.Font, FontStyle.Bold);
+            this.dgvETLValidation.Columns["Errors"].DefaultCellStyle.Format = "N0";
+
+            this.dgvETLValidation.Columns["Final"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dgvETLValidation.Columns["Final"].HeaderCell.Style.Font = new Font(dataGridView1.Font, FontStyle.Bold);
+            this.dgvETLValidation.Columns["Final"].DefaultCellStyle.Format = "N0";
+
+            this.dgvETLValidation.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+
+            int rowCount = dgvETLValidation.Rows.Count;
+
+            // Verificar si hay filas antes de intentar acceder a la última fila
+            if (rowCount > 0)
+            {
+                // Seleccionar manualmente la última fila
+                dgvETLValidation.Rows[rowCount - 1].Selected = true;
+
+                // Configurar la selección de filas después de la selección manual
+                this.dgvETLValidation.MultiSelect = false;
+            }
+
+            DateTime selectedDate = (DateTime)dgvETLValidation.Rows[0].Cells["Date"].Value;
+            this.lblDateETL.Text = $"Last ETL Execution Date: {selectedDate.ToShortDateString()}";
+
+            int warningCount = 0;
+            int errorsCount = 0;
+
+            // Recorre las filas para contar las que cumplen la condición Warning=1
+            foreach (DataGridViewRow row in dgvETLValidation.Rows)
+            {
+                if (Convert.ToInt32(row.Cells["Warnings"].Value) == 1)
+                {
+                    warningCount++;
+                }
+                if (Convert.ToInt32(row.Cells["Validation"].Value) == 1)
+                {
+                    errorsCount++;
+                }
+
+            }
+            lblWarnings.Text = lblWarnings.Text + warningCount.ToString();
+            lblErrors.Text = lblErrors.Text + errorsCount.ToString();
+
+            // Orden de las columnas
+            string[] columnDisplayOrder = { "Table", "Type", "Datamart", "Database", "Initial", "Extracted", "Filtered",
+                                    "Inserted", "Updated", "Deleted", "Errors", "Final" };
+
+            // Establece el orden de visualización de las columnas
+            for (int i = 0; i < columnDisplayOrder.Length; i++)
+            {
+                string columnName = columnDisplayOrder[i];
+                if (dgvETLValidation.Columns.Contains(columnName))
+                {
+                    dgvETLValidation.Columns[columnName].DisplayIndex = i;
+                }
+            }
+        }
+
 
         private void FillBarChart_TableGrowth1()
         {
@@ -338,9 +471,12 @@ namespace ETL_Manager
         }
         private void FormLogs_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dWH_TestDataSet.v_RowDifference' table. You can move, or remove it, as needed.
+            this.v_RowDifferenceTableAdapter.Fill(this.dWH_TestDataSet.v_RowDifference);
             // TODO: This line of code loads data into the 'dWH_TestDataSet.v_AuditTable' table. You can move, or remove it, as needed.
             this.v_AuditTableTableAdapter.Fill(this.dWH_TestDataSet.v_AuditTable);
             this.v_ETL_ExecTimeTableAdapter.Fill(this.dWH_TestDataSet.v_ETL_ExecTime);
+            this.v_ValidateETLProcessTableAdapter1.Fill(this.dWH_TestDataSet.v_ValidateETLProcess);
 
             this.fillDataGrid();
             this.FillChart();
@@ -348,8 +484,14 @@ namespace ETL_Manager
             this.fillDataGridView_FactTableGrowth();
             // this.FillBarChart_TableGrowth();
             this.FillBarChart_TableGrowth1();
+            this.fillDataGridViewETLValidation();
+            this.FilldGVRowDifference();
+
+
 
         }
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -359,7 +501,7 @@ namespace ETL_Manager
         private void btnFilter_Click(object sender, EventArgs e)
         {
             DateTime filter_date = dateTime1.Value.Date;
-            dv.RowFilter = $"CONVERT(begin_datetime, 'System.DateTime') >= #{filter_date.ToString("yyyy-MM-dd")}# AND CONVERT(begin_datetime, 'System.DateTime') < #{filter_date.AddDays(1).ToString("yyyy-MM-dd")}#";
+            dv.RowFilter = $"CONVERT(end_datetime, 'System.DateTime') >= #{filter_date.ToString("yyyy-MM-dd")}# AND CONVERT(end_datetime, 'System.DateTime') < #{filter_date.AddDays(1).ToString("yyyy-MM-dd")}#";
             dataGridView1.DataSource = dv;
         }
 
@@ -390,6 +532,86 @@ namespace ETL_Manager
 
         private void chartTableGrowth_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            // Obtiene el objeto TabControl
+            TabControl tabControl = (TabControl)sender;
+
+            // Obtiene el índice de la pestaña actual
+            int currentIndex = e.Index;
+
+            // Obtiene el objeto Graphics para dibujar
+            Graphics g = e.Graphics;
+
+            // Obtiene el área de la pestaña actual
+            Rectangle tabBounds = tabControl.GetTabRect(currentIndex);
+
+            // Establece el estilo de fuente para la pestaña activa
+            Font tabFont = new Font(tabControl.Font, (e.State == DrawItemState.Selected) ? FontStyle.Bold : FontStyle.Regular);
+
+            // Obtiene el texto de la pestaña actual
+            string tabText = tabControl.TabPages[currentIndex].Text;
+
+            // Dibuja el texto en la pestaña
+            using (Brush brush = new SolidBrush(tabControl.ForeColor))
+            {
+                g.DrawString(tabText, tabFont, brush, tabBounds.Left + 3, tabBounds.Top + 3);
+            }
+        }
+
+        private void dgvETLValidation_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            // Verifica si la fila actual está en modo de edición (fila nueva)
+            if (e.RowIndex == dgvETLValidation.NewRowIndex || (dgvETLValidation.Rows.Count > 0 && e.RowIndex == dgvETLValidation.Rows.Count - 1 && dgvETLValidation.Rows[e.RowIndex].IsNewRow))
+            {
+                return; // No aplica el cambio de color para la última fila en blanco en modo de edición
+            }
+
+            // Verifica si el valor de la columna "Validation" en la fila actual es 0
+            if (Convert.ToInt32(dgvETLValidation.Rows[e.RowIndex].Cells["Validation"].Value) == 1)
+            {
+                // Cambia el color de fondo de toda la fila a rojo
+                dgvETLValidation.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+                dgvETLValidation.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.White;
+            }
+            else if (Convert.ToInt32(dgvETLValidation.Rows[e.RowIndex].Cells["Warnings"].Value) == 1)
+            {
+                // Cambia el color de fondo de toda la fila a amarillo
+                dgvETLValidation.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
+                dgvETLValidation.Rows[e.RowIndex].DefaultCellStyle.ForeColor = dgvETLValidation.DefaultCellStyle.ForeColor;
+            }
+            else
+            {
+                // Restaura el color de fondo predeterminado para otras filas
+                dgvETLValidation.Rows[e.RowIndex].DefaultCellStyle.BackColor = dgvETLValidation.DefaultCellStyle.BackColor;
+                dgvETLValidation.Rows[e.RowIndex].DefaultCellStyle.ForeColor = dgvETLValidation.DefaultCellStyle.ForeColor;
+            }
+
+        }
+
+        private void dGV_RowDifference_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            // Verifica si la fila actual está en modo de edición (fila nueva)
+            if (e.RowIndex == dGV_RowDifference.NewRowIndex || (dGV_RowDifference.Rows.Count > 0 && e.RowIndex == dGV_RowDifference.Rows.Count - 1 && dGV_RowDifference.Rows[e.RowIndex].IsNewRow))
+            {
+                return; // No aplica el cambio de color para la última fila en blanco en modo de edición
+            }
+            // Verifica si el valor de la columna "Validation" en la fila actual es 0
+            if (Convert.ToInt32(dGV_RowDifference.Rows[e.RowIndex].Cells[3].Value) != 0)
+            {
+                // Cambia el color de fondo de toda la fila a rojo
+                dGV_RowDifference.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
+                dGV_RowDifference.Rows[e.RowIndex].DefaultCellStyle.ForeColor = dGV_RowDifference.DefaultCellStyle.ForeColor;
+            }
+            else
+            {
+                // Restaura el color de fondo predeterminado para otras filas
+                dGV_RowDifference.Rows[e.RowIndex].DefaultCellStyle.BackColor = dGV_RowDifference.DefaultCellStyle.BackColor;
+                dGV_RowDifference.Rows[e.RowIndex].DefaultCellStyle.ForeColor = dGV_RowDifference.DefaultCellStyle.ForeColor;
+            }
 
         }
     }
