@@ -170,7 +170,7 @@ ORDER BY [Order], [Database], [Table]</CommandText>
               <DbSource ConnectionRef="DWH_TestConnectionString (Settings)" DbObjectName="DWH_Test.audit.v_RowDifference" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        FactTable, OriginRowCount, FactRowCount, RowDifference
+                    <CommandText>SELECT        FactTable, OriginRowCount, FactRowCount, SourceDifference, EnrichedDifference
 FROM            audit.v_RowDifference
 ORDER BY FactTable</CommandText>
                     <Parameters />
@@ -182,7 +182,8 @@ ORDER BY FactTable</CommandText>
               <Mapping SourceColumn="FactTable" DataSetColumn="FactTable" />
               <Mapping SourceColumn="OriginRowCount" DataSetColumn="OriginRowCount" />
               <Mapping SourceColumn="FactRowCount" DataSetColumn="FactRowCount" />
-              <Mapping SourceColumn="RowDifference" DataSetColumn="RowDifference" />
+              <Mapping SourceColumn="SourceDifference" DataSetColumn="SourceDifference" />
+              <Mapping SourceColumn="EnrichedDifference" DataSetColumn="EnrichedDifference" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -342,7 +343,7 @@ ORDER BY FactTable</CommandText>
               <xs:element name="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_UserColumnName="Date" msprop:Generator_ColumnVarNameInTable="columnDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Validation" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="ValidationColumn" msprop:Generator_ColumnPropNameInRow="Validation" msprop:Generator_UserColumnName="Validation" msprop:Generator_ColumnVarNameInTable="columnValidation" type="xs:int" />
               <xs:element name="Warnings" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="WarningsColumn" msprop:Generator_ColumnPropNameInRow="Warnings" msprop:Generator_UserColumnName="Warnings" msprop:Generator_ColumnVarNameInTable="columnWarnings" type="xs:int" />
-              <xs:element name="Deleted" msprop:Generator_ColumnPropNameInRow="Deleted" msprop:Generator_ColumnPropNameInTable="DeletedColumn" msprop:Generator_ColumnVarNameInTable="columnDeleted" msprop:Generator_UserColumnName="Deleted" type="xs:long" minOccurs="0" />
+              <xs:element name="Deleted" msprop:Generator_UserColumnName="Deleted" msprop:Generator_ColumnPropNameInTable="DeletedColumn" msprop:Generator_ColumnPropNameInRow="Deleted" msprop:Generator_ColumnVarNameInTable="columnDeleted" type="xs:long" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -358,7 +359,8 @@ ORDER BY FactTable</CommandText>
               </xs:element>
               <xs:element name="OriginRowCount" msprop:Generator_ColumnPropNameInTable="OriginRowCountColumn" msprop:Generator_ColumnPropNameInRow="OriginRowCount" msprop:Generator_UserColumnName="OriginRowCount" msprop:Generator_ColumnVarNameInTable="columnOriginRowCount" type="xs:long" minOccurs="0" />
               <xs:element name="FactRowCount" msprop:Generator_ColumnPropNameInTable="FactRowCountColumn" msprop:Generator_ColumnPropNameInRow="FactRowCount" msprop:Generator_UserColumnName="FactRowCount" msprop:Generator_ColumnVarNameInTable="columnFactRowCount" type="xs:long" minOccurs="0" />
-              <xs:element name="RowDifference" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="RowDifferenceColumn" msprop:Generator_ColumnPropNameInRow="RowDifference" msprop:Generator_UserColumnName="RowDifference" msprop:Generator_ColumnVarNameInTable="columnRowDifference" type="xs:long" minOccurs="0" />
+              <xs:element name="SourceDifference" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="SourceDifference" msprop:Generator_ColumnPropNameInTable="SourceDifferenceColumn" msprop:Generator_ColumnVarNameInTable="columnSourceDifference" msprop:Generator_UserColumnName="SourceDifference" type="xs:long" minOccurs="0" />
+              <xs:element name="EnrichedDifference" msprop:Generator_ColumnPropNameInRow="EnrichedDifference" msprop:Generator_ColumnPropNameInTable="EnrichedDifferenceColumn" msprop:Generator_ColumnVarNameInTable="columnEnrichedDifference" msprop:Generator_UserColumnName="EnrichedDifference" type="xs:long" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

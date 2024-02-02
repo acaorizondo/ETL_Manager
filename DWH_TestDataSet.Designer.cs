@@ -2314,7 +2314,9 @@ namespace ETL_Manager {
             
             private global::System.Data.DataColumn columnFactRowCount;
             
-            private global::System.Data.DataColumn columnRowDifference;
+            private global::System.Data.DataColumn columnSourceDifference;
+            
+            private global::System.Data.DataColumn columnEnrichedDifference;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -2375,9 +2377,17 @@ namespace ETL_Manager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn RowDifferenceColumn {
+            public global::System.Data.DataColumn SourceDifferenceColumn {
                 get {
-                    return this.columnRowDifference;
+                    return this.columnSourceDifference;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EnrichedDifferenceColumn {
+                get {
+                    return this.columnEnrichedDifference;
                 }
             }
             
@@ -2418,13 +2428,14 @@ namespace ETL_Manager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public v_RowDifferenceRow Addv_RowDifferenceRow(string FactTable, long OriginRowCount, long FactRowCount, long RowDifference) {
+            public v_RowDifferenceRow Addv_RowDifferenceRow(string FactTable, long OriginRowCount, long FactRowCount, long SourceDifference, long EnrichedDifference) {
                 v_RowDifferenceRow rowv_RowDifferenceRow = ((v_RowDifferenceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FactTable,
                         OriginRowCount,
                         FactRowCount,
-                        RowDifference};
+                        SourceDifference,
+                        EnrichedDifference};
                 rowv_RowDifferenceRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowv_RowDifferenceRow);
                 return rowv_RowDifferenceRow;
@@ -2450,7 +2461,8 @@ namespace ETL_Manager {
                 this.columnFactTable = base.Columns["FactTable"];
                 this.columnOriginRowCount = base.Columns["OriginRowCount"];
                 this.columnFactRowCount = base.Columns["FactRowCount"];
-                this.columnRowDifference = base.Columns["RowDifference"];
+                this.columnSourceDifference = base.Columns["SourceDifference"];
+                this.columnEnrichedDifference = base.Columns["EnrichedDifference"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2462,10 +2474,12 @@ namespace ETL_Manager {
                 base.Columns.Add(this.columnOriginRowCount);
                 this.columnFactRowCount = new global::System.Data.DataColumn("FactRowCount", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFactRowCount);
-                this.columnRowDifference = new global::System.Data.DataColumn("RowDifference", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRowDifference);
+                this.columnSourceDifference = new global::System.Data.DataColumn("SourceDifference", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSourceDifference);
+                this.columnEnrichedDifference = new global::System.Data.DataColumn("EnrichedDifference", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEnrichedDifference);
                 this.columnFactTable.MaxLength = 100;
-                this.columnRowDifference.ReadOnly = true;
+                this.columnSourceDifference.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3776,17 +3790,33 @@ namespace ETL_Manager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long RowDifference {
+            public long SourceDifference {
                 get {
                     try {
-                        return ((long)(this[this.tablev_RowDifference.RowDifferenceColumn]));
+                        return ((long)(this[this.tablev_RowDifference.SourceDifferenceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RowDifference\' in table \'v_RowDifference\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'SourceDifference\' in table \'v_RowDifference\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablev_RowDifference.RowDifferenceColumn] = value;
+                    this[this.tablev_RowDifference.SourceDifferenceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public long EnrichedDifference {
+                get {
+                    try {
+                        return ((long)(this[this.tablev_RowDifference.EnrichedDifferenceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EnrichedDifference\' in table \'v_RowDifference\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablev_RowDifference.EnrichedDifferenceColumn] = value;
                 }
             }
             
@@ -3828,14 +3858,26 @@ namespace ETL_Manager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsRowDifferenceNull() {
-                return this.IsNull(this.tablev_RowDifference.RowDifferenceColumn);
+            public bool IsSourceDifferenceNull() {
+                return this.IsNull(this.tablev_RowDifference.SourceDifferenceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetRowDifferenceNull() {
-                this[this.tablev_RowDifference.RowDifferenceColumn] = global::System.Convert.DBNull;
+            public void SetSourceDifferenceNull() {
+                this[this.tablev_RowDifference.SourceDifferenceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsEnrichedDifferenceNull() {
+                return this.IsNull(this.tablev_RowDifference.EnrichedDifferenceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetEnrichedDifferenceNull() {
+                this[this.tablev_RowDifference.EnrichedDifferenceColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5146,7 +5188,8 @@ ORDER BY Date";
             tableMapping.ColumnMappings.Add("FactTable", "FactTable");
             tableMapping.ColumnMappings.Add("OriginRowCount", "OriginRowCount");
             tableMapping.ColumnMappings.Add("FactRowCount", "FactRowCount");
-            tableMapping.ColumnMappings.Add("RowDifference", "RowDifference");
+            tableMapping.ColumnMappings.Add("SourceDifference", "SourceDifference");
+            tableMapping.ColumnMappings.Add("EnrichedDifference", "EnrichedDifference");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -5163,8 +5206,8 @@ ORDER BY Date";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        FactTable, OriginRowCount, FactRowCount, RowDifference\r\nFROM       " +
-                "     audit.v_RowDifference\r\nORDER BY FactTable";
+            this._commandCollection[0].CommandText = "SELECT        FactTable, OriginRowCount, FactRowCount, SourceDifference, Enriched" +
+                "Difference\r\nFROM            audit.v_RowDifference\r\nORDER BY FactTable";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

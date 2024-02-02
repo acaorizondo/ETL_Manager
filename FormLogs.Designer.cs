@@ -31,20 +31,20 @@ namespace ETL_Manager
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnClose = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tp_ETLValidation = new System.Windows.Forms.TabPage();
@@ -62,17 +62,26 @@ namespace ETL_Manager
             this.dgvETLValidation = new System.Windows.Forms.DataGridView();
             this.tp_SourceValidation = new System.Windows.Forms.TabPage();
             this.dGV_RowDifference = new System.Windows.Forms.DataGridView();
-            this.factTableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.originRowCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.factRowCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rowDifferenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vRowDifferenceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dWH_TestDataSet = new ETL_Manager.DWH_TestDataSet();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnResetFilter = new System.Windows.Forms.Button();
             this.dateTime1 = new System.Windows.Forms.DateTimePicker();
             this.btnFilter = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.lineChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cBCriteria = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cBFactTables = new System.Windows.Forms.ComboBox();
+            this.chartTableGrowth = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dGV_FactTablesGrowth = new System.Windows.Forms.DataGridView();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.vRowDifferenceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dWH_TestDataSet = new ETL_Manager.DWH_TestDataSet();
             this.auditKeyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parentAuditKeyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.packageNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,23 +102,20 @@ namespace ETL_Manager
             this.exectimeinminutesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exectimeinhoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vAuditTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.lineChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cBCriteria = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cBFactTables = new System.Windows.Forms.ComboBox();
-            this.chartTableGrowth = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dGV_FactTablesGrowth = new System.Windows.Forms.DataGridView();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.v_AuditTableTableAdapter = new ETL_Manager.DWH_TestDataSetTableAdapters.v_AuditTableTableAdapter();
             this.dwH_TestDataSet1 = new ETL_Manager.DWH_TestDataSet();
             this.v_ValidateETLProcessTableAdapter1 = new ETL_Manager.DWH_TestDataSetTableAdapters.v_ValidateETLProcessTableAdapter();
             this.v_RowDifferenceTableAdapter = new ETL_Manager.DWH_TestDataSetTableAdapters.v_RowDifferenceTableAdapter();
+            this.factTableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.originRowCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.factRowCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SourceDifference = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EnrichedDifference = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.lblETLErrors = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tp_ETLValidation.SuspendLayout();
             this.panelWarnings.SuspendLayout();
@@ -119,11 +125,8 @@ namespace ETL_Manager
             ((System.ComponentModel.ISupportInitialize)(this.dgvETLValidation)).BeginInit();
             this.tp_SourceValidation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_RowDifference)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vRowDifferenceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dWH_TestDataSet)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vAuditTableBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.tabPage4.SuspendLayout();
@@ -131,7 +134,12 @@ namespace ETL_Manager
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartTableGrowth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_FactTablesGrowth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRowDifferenceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dWH_TestDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vAuditTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dwH_TestDataSet1)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
@@ -187,7 +195,7 @@ namespace ETL_Manager
             this.panelWarnings.Controls.Add(this.panel5);
             this.panelWarnings.Controls.Add(this.panel7);
             this.panelWarnings.ForeColor = System.Drawing.Color.Red;
-            this.panelWarnings.Location = new System.Drawing.Point(822, 5);
+            this.panelWarnings.Location = new System.Drawing.Point(822, 9);
             this.panelWarnings.Name = "panelWarnings";
             this.panelWarnings.Size = new System.Drawing.Size(12, 10);
             this.panelWarnings.TabIndex = 6;
@@ -223,7 +231,7 @@ namespace ETL_Manager
             this.panelErrors.Controls.Add(this.panel1);
             this.panelErrors.Controls.Add(this.panel2);
             this.panelErrors.ForeColor = System.Drawing.Color.Red;
-            this.panelErrors.Location = new System.Drawing.Point(733, 6);
+            this.panelErrors.Location = new System.Drawing.Point(733, 10);
             this.panelErrors.Name = "panelErrors";
             this.panelErrors.Size = new System.Drawing.Size(12, 10);
             this.panelErrors.TabIndex = 5;
@@ -255,7 +263,7 @@ namespace ETL_Manager
             // lblWarnings
             // 
             this.lblWarnings.AutoSize = true;
-            this.lblWarnings.Location = new System.Drawing.Point(834, 3);
+            this.lblWarnings.Location = new System.Drawing.Point(834, 7);
             this.lblWarnings.Name = "lblWarnings";
             this.lblWarnings.Size = new System.Drawing.Size(58, 13);
             this.lblWarnings.TabIndex = 4;
@@ -264,7 +272,7 @@ namespace ETL_Manager
             // lblErrors
             // 
             this.lblErrors.AutoSize = true;
-            this.lblErrors.Location = new System.Drawing.Point(745, 3);
+            this.lblErrors.Location = new System.Drawing.Point(745, 7);
             this.lblErrors.Name = "lblErrors";
             this.lblErrors.Size = new System.Drawing.Size(40, 13);
             this.lblErrors.TabIndex = 3;
@@ -287,33 +295,35 @@ namespace ETL_Manager
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvETLValidation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvETLValidation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvETLValidation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvETLValidation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvETLValidation.Location = new System.Drawing.Point(3, 33);
             this.dgvETLValidation.MultiSelect = false;
             this.dgvETLValidation.Name = "dgvETLValidation";
             this.dgvETLValidation.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvETLValidation.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvETLValidation.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvETLValidation.Size = new System.Drawing.Size(1234, 623);
             this.dgvETLValidation.TabIndex = 0;
             this.dgvETLValidation.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvETLValidation_RowPrePaint);
             // 
             // tp_SourceValidation
             // 
+            this.tp_SourceValidation.Controls.Add(this.panel4);
+            this.tp_SourceValidation.Controls.Add(this.lblETLErrors);
             this.tp_SourceValidation.Controls.Add(this.dGV_RowDifference);
             this.tp_SourceValidation.Location = new System.Drawing.Point(4, 22);
             this.tp_SourceValidation.Name = "tp_SourceValidation";
@@ -330,65 +340,28 @@ namespace ETL_Manager
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dGV_RowDifference.AutoGenerateColumns = false;
             this.dGV_RowDifference.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV_RowDifference.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV_RowDifference.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dGV_RowDifference.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGV_RowDifference.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.factTableDataGridViewTextBoxColumn,
             this.originRowCountDataGridViewTextBoxColumn,
             this.factRowCountDataGridViewTextBoxColumn,
-            this.rowDifferenceDataGridViewTextBoxColumn});
+            this.SourceDifference,
+            this.EnrichedDifference});
             this.dGV_RowDifference.DataSource = this.vRowDifferenceBindingSource;
-            this.dGV_RowDifference.Location = new System.Drawing.Point(10, 15);
+            this.dGV_RowDifference.Location = new System.Drawing.Point(6, 31);
             this.dGV_RowDifference.Name = "dGV_RowDifference";
             this.dGV_RowDifference.ReadOnly = true;
-            this.dGV_RowDifference.Size = new System.Drawing.Size(1224, 638);
+            this.dGV_RowDifference.Size = new System.Drawing.Size(1228, 622);
             this.dGV_RowDifference.TabIndex = 0;
             this.dGV_RowDifference.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dGV_RowDifference_RowPrePaint);
-            // 
-            // factTableDataGridViewTextBoxColumn
-            // 
-            this.factTableDataGridViewTextBoxColumn.DataPropertyName = "FactTable";
-            this.factTableDataGridViewTextBoxColumn.HeaderText = "FactTable";
-            this.factTableDataGridViewTextBoxColumn.Name = "factTableDataGridViewTextBoxColumn";
-            this.factTableDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // originRowCountDataGridViewTextBoxColumn
-            // 
-            this.originRowCountDataGridViewTextBoxColumn.DataPropertyName = "OriginRowCount";
-            this.originRowCountDataGridViewTextBoxColumn.HeaderText = "OriginRowCount";
-            this.originRowCountDataGridViewTextBoxColumn.Name = "originRowCountDataGridViewTextBoxColumn";
-            this.originRowCountDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // factRowCountDataGridViewTextBoxColumn
-            // 
-            this.factRowCountDataGridViewTextBoxColumn.DataPropertyName = "FactRowCount";
-            this.factRowCountDataGridViewTextBoxColumn.HeaderText = "FactRowCount";
-            this.factRowCountDataGridViewTextBoxColumn.Name = "factRowCountDataGridViewTextBoxColumn";
-            this.factRowCountDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rowDifferenceDataGridViewTextBoxColumn
-            // 
-            this.rowDifferenceDataGridViewTextBoxColumn.DataPropertyName = "RowDifference";
-            this.rowDifferenceDataGridViewTextBoxColumn.HeaderText = "RowDifference";
-            this.rowDifferenceDataGridViewTextBoxColumn.Name = "rowDifferenceDataGridViewTextBoxColumn";
-            this.rowDifferenceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vRowDifferenceBindingSource
-            // 
-            this.vRowDifferenceBindingSource.DataMember = "v_RowDifference";
-            this.vRowDifferenceBindingSource.DataSource = this.dWH_TestDataSet;
-            // 
-            // dWH_TestDataSet
-            // 
-            this.dWH_TestDataSet.DataSetName = "DWH_TestDataSet";
-            this.dWH_TestDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabPage1
             // 
@@ -444,14 +417,14 @@ namespace ETL_Manager
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.auditKeyDataGridViewTextBoxColumn,
@@ -479,6 +452,203 @@ namespace ETL_Manager
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1202, 595);
             this.dataGridView1.TabIndex = 7;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.checkedListBox1);
+            this.tabPage2.Controls.Add(this.chart1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1240, 659);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "  ETL Phases   ";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Preparse Source",
+            "Extract Jobs",
+            "Transform_Loads_Dimensions",
+            "Transform_Loads_Facts"});
+            this.checkedListBox1.Location = new System.Drawing.Point(1053, 82);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(148, 64);
+            this.checkedListBox1.TabIndex = 1;
+            this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
+            // 
+            // chart1
+            // 
+            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea10.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chart1.Legends.Add(legend10);
+            this.chart1.Location = new System.Drawing.Point(20, 22);
+            this.chart1.Name = "chart1";
+            series10.ChartArea = "ChartArea1";
+            series10.Legend = "Legend1";
+            series10.Name = "Series1";
+            this.chart1.Series.Add(series10);
+            this.chart1.Size = new System.Drawing.Size(1202, 608);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.lineChart);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1240, 659);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "  Execution Time   ";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // lineChart
+            // 
+            this.lineChart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea11.Name = "ChartArea1";
+            this.lineChart.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.lineChart.Legends.Add(legend11);
+            this.lineChart.Location = new System.Drawing.Point(20, 22);
+            this.lineChart.Name = "lineChart";
+            series11.ChartArea = "ChartArea1";
+            series11.Legend = "Legend1";
+            series11.Name = "Series1";
+            this.lineChart.Series.Add(series11);
+            this.lineChart.Size = new System.Drawing.Size(1202, 608);
+            this.lineChart.TabIndex = 0;
+            this.lineChart.Text = "chart2";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.label2);
+            this.tabPage3.Controls.Add(this.cBCriteria);
+            this.tabPage3.Controls.Add(this.label1);
+            this.tabPage3.Controls.Add(this.cBFactTables);
+            this.tabPage3.Controls.Add(this.chartTableGrowth);
+            this.tabPage3.Controls.Add(this.dGV_FactTablesGrowth);
+            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1240, 659);
+            this.tabPage3.TabIndex = 4;
+            this.tabPage3.Text = "  Fact Tables Growth   ";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(938, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Criteria";
+            // 
+            // cBCriteria
+            // 
+            this.cBCriteria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cBCriteria.FormattingEnabled = true;
+            this.cBCriteria.Items.AddRange(new object[] {
+            "--",
+            "Execution time",
+            "Inserted row count"});
+            this.cBCriteria.Location = new System.Drawing.Point(938, 32);
+            this.cBCriteria.Name = "cBCriteria";
+            this.cBCriteria.Size = new System.Drawing.Size(121, 21);
+            this.cBCriteria.TabIndex = 4;
+            this.cBCriteria.SelectedIndexChanged += new System.EventHandler(this.cBCriteria_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1081, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Fact Table";
+            // 
+            // cBFactTables
+            // 
+            this.cBFactTables.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cBFactTables.FormattingEnabled = true;
+            this.cBFactTables.Items.AddRange(new object[] {
+            "--",
+            "FactOrder",
+            "FactTransfer"});
+            this.cBFactTables.Location = new System.Drawing.Point(1084, 32);
+            this.cBFactTables.Name = "cBFactTables";
+            this.cBFactTables.Size = new System.Drawing.Size(137, 21);
+            this.cBFactTables.TabIndex = 2;
+            this.cBFactTables.SelectedIndexChanged += new System.EventHandler(this.cBFactTables_SelectedIndexChanged);
+            // 
+            // chartTableGrowth
+            // 
+            this.chartTableGrowth.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea12.Name = "ChartArea1";
+            this.chartTableGrowth.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.chartTableGrowth.Legends.Add(legend12);
+            this.chartTableGrowth.Location = new System.Drawing.Point(443, 59);
+            this.chartTableGrowth.Name = "chartTableGrowth";
+            series12.ChartArea = "ChartArea1";
+            series12.Legend = "Legend1";
+            series12.Name = "Series1";
+            this.chartTableGrowth.Series.Add(series12);
+            this.chartTableGrowth.Size = new System.Drawing.Size(778, 584);
+            this.chartTableGrowth.TabIndex = 1;
+            this.chartTableGrowth.Text = "chart2";
+            this.chartTableGrowth.Click += new System.EventHandler(this.chartTableGrowth_Click);
+            // 
+            // dGV_FactTablesGrowth
+            // 
+            this.dGV_FactTablesGrowth.AllowUserToAddRows = false;
+            this.dGV_FactTablesGrowth.AllowUserToDeleteRows = false;
+            this.dGV_FactTablesGrowth.AllowUserToOrderColumns = true;
+            this.dGV_FactTablesGrowth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV_FactTablesGrowth.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.dGV_FactTablesGrowth.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGV_FactTablesGrowth.Location = new System.Drawing.Point(16, 59);
+            this.dGV_FactTablesGrowth.Name = "dGV_FactTablesGrowth";
+            this.dGV_FactTablesGrowth.ReadOnly = true;
+            this.dGV_FactTablesGrowth.Size = new System.Drawing.Size(405, 584);
+            this.dGV_FactTablesGrowth.TabIndex = 0;
+            // 
+            // vRowDifferenceBindingSource
+            // 
+            this.vRowDifferenceBindingSource.DataMember = "v_RowDifference";
+            this.vRowDifferenceBindingSource.DataSource = this.dWH_TestDataSet;
+            // 
+            // dWH_TestDataSet
+            // 
+            this.dWH_TestDataSet.DataSetName = "DWH_TestDataSet";
+            this.dWH_TestDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // auditKeyDataGridViewTextBoxColumn
             // 
@@ -618,193 +788,6 @@ namespace ETL_Manager
             this.vAuditTableBindingSource.DataMember = "v_AuditTable";
             this.vAuditTableBindingSource.DataSource = this.dWH_TestDataSet;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.checkedListBox1);
-            this.tabPage2.Controls.Add(this.chart1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1240, 659);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "  ETL Phases   ";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Preparse Source",
-            "Extract Jobs",
-            "Transform_Loads_Dimensions",
-            "Transform_Loads_Facts"});
-            this.checkedListBox1.Location = new System.Drawing.Point(1053, 82);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(148, 64);
-            this.checkedListBox1.TabIndex = 1;
-            this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
-            // 
-            // chart1
-            // 
-            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(20, 22);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1202, 608);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.lineChart);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1240, 659);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "  Execution Time   ";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // lineChart
-            // 
-            this.lineChart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea2.Name = "ChartArea1";
-            this.lineChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.lineChart.Legends.Add(legend2);
-            this.lineChart.Location = new System.Drawing.Point(20, 22);
-            this.lineChart.Name = "lineChart";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.lineChart.Series.Add(series2);
-            this.lineChart.Size = new System.Drawing.Size(1202, 608);
-            this.lineChart.TabIndex = 0;
-            this.lineChart.Text = "chart2";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.cBCriteria);
-            this.tabPage3.Controls.Add(this.label1);
-            this.tabPage3.Controls.Add(this.cBFactTables);
-            this.tabPage3.Controls.Add(this.chartTableGrowth);
-            this.tabPage3.Controls.Add(this.dGV_FactTablesGrowth);
-            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1240, 659);
-            this.tabPage3.TabIndex = 4;
-            this.tabPage3.Text = "  Fact Tables Growth   ";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(938, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Criteria";
-            // 
-            // cBCriteria
-            // 
-            this.cBCriteria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cBCriteria.FormattingEnabled = true;
-            this.cBCriteria.Items.AddRange(new object[] {
-            "--",
-            "Execution time",
-            "Inserted row count"});
-            this.cBCriteria.Location = new System.Drawing.Point(938, 32);
-            this.cBCriteria.Name = "cBCriteria";
-            this.cBCriteria.Size = new System.Drawing.Size(121, 21);
-            this.cBCriteria.TabIndex = 4;
-            this.cBCriteria.SelectedIndexChanged += new System.EventHandler(this.cBCriteria_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1081, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Fact Table";
-            // 
-            // cBFactTables
-            // 
-            this.cBFactTables.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cBFactTables.FormattingEnabled = true;
-            this.cBFactTables.Items.AddRange(new object[] {
-            "--",
-            "FactOrder",
-            "FactTransfer"});
-            this.cBFactTables.Location = new System.Drawing.Point(1084, 32);
-            this.cBFactTables.Name = "cBFactTables";
-            this.cBFactTables.Size = new System.Drawing.Size(137, 21);
-            this.cBFactTables.TabIndex = 2;
-            this.cBFactTables.SelectedIndexChanged += new System.EventHandler(this.cBFactTables_SelectedIndexChanged);
-            // 
-            // chartTableGrowth
-            // 
-            this.chartTableGrowth.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.chartTableGrowth.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartTableGrowth.Legends.Add(legend3);
-            this.chartTableGrowth.Location = new System.Drawing.Point(443, 59);
-            this.chartTableGrowth.Name = "chartTableGrowth";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartTableGrowth.Series.Add(series3);
-            this.chartTableGrowth.Size = new System.Drawing.Size(778, 584);
-            this.chartTableGrowth.TabIndex = 1;
-            this.chartTableGrowth.Text = "chart2";
-            this.chartTableGrowth.Click += new System.EventHandler(this.chartTableGrowth_Click);
-            // 
-            // dGV_FactTablesGrowth
-            // 
-            this.dGV_FactTablesGrowth.AllowUserToAddRows = false;
-            this.dGV_FactTablesGrowth.AllowUserToDeleteRows = false;
-            this.dGV_FactTablesGrowth.AllowUserToOrderColumns = true;
-            this.dGV_FactTablesGrowth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV_FactTablesGrowth.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dGV_FactTablesGrowth.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGV_FactTablesGrowth.Location = new System.Drawing.Point(16, 59);
-            this.dGV_FactTablesGrowth.Name = "dGV_FactTablesGrowth";
-            this.dGV_FactTablesGrowth.ReadOnly = true;
-            this.dGV_FactTablesGrowth.Size = new System.Drawing.Size(405, 584);
-            this.dGV_FactTablesGrowth.TabIndex = 0;
-            // 
             // v_AuditTableTableAdapter
             // 
             this.v_AuditTableTableAdapter.ClearBeforeFill = true;
@@ -821,6 +804,88 @@ namespace ETL_Manager
             // v_RowDifferenceTableAdapter
             // 
             this.v_RowDifferenceTableAdapter.ClearBeforeFill = true;
+            // 
+            // factTableDataGridViewTextBoxColumn
+            // 
+            this.factTableDataGridViewTextBoxColumn.DataPropertyName = "FactTable";
+            this.factTableDataGridViewTextBoxColumn.HeaderText = "FactTable";
+            this.factTableDataGridViewTextBoxColumn.Name = "factTableDataGridViewTextBoxColumn";
+            this.factTableDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // originRowCountDataGridViewTextBoxColumn
+            // 
+            this.originRowCountDataGridViewTextBoxColumn.DataPropertyName = "OriginRowCount";
+            this.originRowCountDataGridViewTextBoxColumn.HeaderText = "OriginRowCount";
+            this.originRowCountDataGridViewTextBoxColumn.Name = "originRowCountDataGridViewTextBoxColumn";
+            this.originRowCountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // factRowCountDataGridViewTextBoxColumn
+            // 
+            this.factRowCountDataGridViewTextBoxColumn.DataPropertyName = "FactRowCount";
+            this.factRowCountDataGridViewTextBoxColumn.HeaderText = "FactRowCount";
+            this.factRowCountDataGridViewTextBoxColumn.Name = "factRowCountDataGridViewTextBoxColumn";
+            this.factRowCountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // SourceDifference
+            // 
+            this.SourceDifference.DataPropertyName = "SourceDifference";
+            this.SourceDifference.HeaderText = "SourceDifference";
+            this.SourceDifference.Name = "SourceDifference";
+            this.SourceDifference.ReadOnly = true;
+            // 
+            // EnrichedDifference
+            // 
+            this.EnrichedDifference.DataPropertyName = "EnrichedDifference";
+            this.EnrichedDifference.HeaderText = "EnrichedDifference";
+            this.EnrichedDifference.Name = "EnrichedDifference";
+            this.EnrichedDifference.ReadOnly = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.Red;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.panel8);
+            this.panel4.Controls.Add(this.panel10);
+            this.panel4.ForeColor = System.Drawing.Color.Red;
+            this.panel4.Location = new System.Drawing.Point(1154, 13);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(12, 10);
+            this.panel4.TabIndex = 7;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Yellow;
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.ForeColor = System.Drawing.Color.Red;
+            this.panel8.Location = new System.Drawing.Point(88, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(12, 10);
+            this.panel8.TabIndex = 7;
+            // 
+            // panel9
+            // 
+            this.panel9.Location = new System.Drawing.Point(94, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(54, 10);
+            this.panel9.TabIndex = 6;
+            // 
+            // panel10
+            // 
+            this.panel10.Location = new System.Drawing.Point(94, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(54, 10);
+            this.panel10.TabIndex = 6;
+            // 
+            // lblETLErrors
+            // 
+            this.lblETLErrors.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblETLErrors.AutoSize = true;
+            this.lblETLErrors.Location = new System.Drawing.Point(1166, 10);
+            this.lblETLErrors.Name = "lblETLErrors";
+            this.lblETLErrors.Size = new System.Drawing.Size(40, 13);
+            this.lblETLErrors.TabIndex = 6;
+            this.lblETLErrors.Text = "Errors: ";
             // 
             // FormLogs
             // 
@@ -842,12 +907,10 @@ namespace ETL_Manager
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvETLValidation)).EndInit();
             this.tp_SourceValidation.ResumeLayout(false);
+            this.tp_SourceValidation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_RowDifference)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vRowDifferenceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dWH_TestDataSet)).EndInit();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vAuditTableBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.tabPage4.ResumeLayout(false);
@@ -856,7 +919,12 @@ namespace ETL_Manager
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartTableGrowth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_FactTablesGrowth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRowDifferenceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dWH_TestDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vAuditTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dwH_TestDataSet1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -926,9 +994,16 @@ namespace ETL_Manager
         private System.Windows.Forms.DataGridView dGV_RowDifference;
         private System.Windows.Forms.BindingSource vRowDifferenceBindingSource;
         private DWH_TestDataSetTableAdapters.v_RowDifferenceTableAdapter v_RowDifferenceTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn factTableDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn originRowCountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn factRowCountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rowDifferenceDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn factTableDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn originRowCountDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn factRowCountDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn SourceDifference;
+        private DataGridViewTextBoxColumn EnrichedDifference;
+        private Panel panel4;
+        private Panel panel8;
+        private Panel panel9;
+        private Panel panel10;
+        private Label lblETLErrors;
     }
 }

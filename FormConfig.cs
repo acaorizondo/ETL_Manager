@@ -401,5 +401,17 @@ namespace ETL_Manager
                 fullLoad(1);
             }
         }
+
+        private void ckBReloadFacts_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ckBReloadFacts.Checked == true)
+            {
+                fullLoad(0);
+            }
+            else
+            {
+                fullLoad(1);
+            }
+        }
     }
 }

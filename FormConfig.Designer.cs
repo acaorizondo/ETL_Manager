@@ -31,6 +31,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cBReloadDWH = new System.Windows.Forms.CheckBox();
             this.groupBoxReceiving = new System.Windows.Forms.GroupBox();
             this.gbAll_Receiving = new System.Windows.Forms.GroupBox();
             this.rbIncremental_Receiving = new System.Windows.Forms.RadioButton();
@@ -205,7 +206,7 @@
             this.trackBarFactTransfer = new System.Windows.Forms.TrackBar();
             this.btnSave = new System.Windows.Forms.Button();
             this.runPackagesTableAdapter = new ETL_Manager.DWH_TestDataSetTableAdapters.RunPackagesTableAdapter();
-            this.cBReloadDWH = new System.Windows.Forms.CheckBox();
+            this.ckBReloadFacts = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBoxReceiving.SuspendLayout();
@@ -319,6 +320,7 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
+            this.tabPage1.Controls.Add(this.ckBReloadFacts);
             this.tabPage1.Controls.Add(this.cBReloadDWH);
             this.tabPage1.Controls.Add(this.groupBoxReceiving);
             this.tabPage1.Controls.Add(this.groupBoxDelivery);
@@ -333,6 +335,19 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "ETL Execution Configuration";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // cBReloadDWH
+            // 
+            this.cBReloadDWH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cBReloadDWH.AutoSize = true;
+            this.cBReloadDWH.Location = new System.Drawing.Point(979, 27);
+            this.cBReloadDWH.Name = "cBReloadDWH";
+            this.cBReloadDWH.Size = new System.Drawing.Size(141, 17);
+            this.cBReloadDWH.TabIndex = 14;
+            this.cBReloadDWH.Text = "Reload Data warehouse";
+            this.cBReloadDWH.UseVisualStyleBackColor = true;
+            this.cBReloadDWH.CheckedChanged += new System.EventHandler(this.cBReloadDWH_CheckedChanged);
             // 
             // groupBoxReceiving
             // 
@@ -2107,18 +2122,17 @@
             // 
             this.runPackagesTableAdapter.ClearBeforeFill = true;
             // 
-            // cBReloadDWH
+            // ckBReloadFacts
             // 
-            this.cBReloadDWH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cBReloadDWH.AutoSize = true;
-            this.cBReloadDWH.Location = new System.Drawing.Point(996, 27);
-            this.cBReloadDWH.Name = "cBReloadDWH";
-            this.cBReloadDWH.Size = new System.Drawing.Size(141, 17);
-            this.cBReloadDWH.TabIndex = 14;
-            this.cBReloadDWH.Text = "Reload Data warehouse";
-            this.cBReloadDWH.UseVisualStyleBackColor = true;
-            this.cBReloadDWH.CheckedChanged += new System.EventHandler(this.cBReloadDWH_CheckedChanged);
+            this.ckBReloadFacts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ckBReloadFacts.AutoSize = true;
+            this.ckBReloadFacts.Location = new System.Drawing.Point(830, 27);
+            this.ckBReloadFacts.Name = "ckBReloadFacts";
+            this.ckBReloadFacts.Size = new System.Drawing.Size(119, 17);
+            this.ckBReloadFacts.TabIndex = 15;
+            this.ckBReloadFacts.Text = "Reload Fact Tables";
+            this.ckBReloadFacts.UseVisualStyleBackColor = true;
+            this.ckBReloadFacts.CheckedChanged += new System.EventHandler(this.ckBReloadFacts_CheckedChanged);
             // 
             // FormConfig
             // 
@@ -2446,5 +2460,6 @@
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.TrackBar trackBarFactAdjustment;
         private System.Windows.Forms.CheckBox cBReloadDWH;
+        private System.Windows.Forms.CheckBox ckBReloadFacts;
     }
 }

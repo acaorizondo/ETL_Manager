@@ -24,6 +24,10 @@
 
 namespace ETL_Manager.DWH_TestDataSetTableAdapters
 {
+    partial class v_RowDifferenceTableAdapter
+    {
+    }
+
     partial class RunPackagesTableAdapter
     {
     }

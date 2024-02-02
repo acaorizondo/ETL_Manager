@@ -11,7 +11,7 @@
     <Shape ID="DesignTable:v_AuditStats" ZOrder="5" X="631" Y="71" Height="172" Width="217" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
     <Shape ID="DesignTable:v_ETL_ExecTime" ZOrder="4" X="633" Y="255" Height="115" Width="236" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:v_ValidateETLProcess" ZOrder="2" X="978" Y="67" Height="438" Width="268" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="370" />
-    <Shape ID="DesignTable:v_RowDifference" ZOrder="1" X="132" Y="442" Height="153" Width="242" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
+    <Shape ID="DesignTable:v_RowDifference" ZOrder="1" X="132" Y="442" Height="172" Width="242" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
   </Shapes>
   <Connectors />
 </DiagramLayout>

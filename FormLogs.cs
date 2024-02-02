@@ -107,16 +107,43 @@ namespace ETL_Manager
             dGV_RowDifference.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dGV_RowDifference.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dGV_RowDifference.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dGV_RowDifference.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             dGV_RowDifference.Columns[1].DefaultCellStyle.Format = "N0";
             dGV_RowDifference.Columns[2].DefaultCellStyle.Format = "N0";
             dGV_RowDifference.Columns[3].DefaultCellStyle.Format = "N0";
+            dGV_RowDifference.Columns[4].DefaultCellStyle.Format = "N0";
 
             dGV_RowDifference.Columns[1].HeaderText = "Row count in Source";
             dGV_RowDifference.Columns[2].HeaderText = "Row count in Fact Table";
-            dGV_RowDifference.Columns[3].HeaderText = "Row difference";
+            dGV_RowDifference.Columns[3].HeaderText = "Difference from Source";
+            dGV_RowDifference.Columns[4].HeaderText = "Difference from Eriched Fact";
 
             dGV_RowDifference.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // error count
+            int errorsCount = 0;
+
+            foreach (DataGridViewRow row in dGV_RowDifference.Rows)
+            {
+              if (row.Cells[3].Value != null && row.Cells[4].Value != null)
+                {
+                    int valueColumn3 = Convert.ToInt32(row.Cells[3].Value);
+                    int valueColumn4 = Convert.ToInt32(row.Cells[4].Value);
+
+                    // Verifica si ambas columnas son diferentes de cero
+                    if (valueColumn3 != 0 || valueColumn4 != 0)
+                    {
+                        errorsCount++;
+                    }
+                }
+            }
+
+            // Ahora errorsCount contiene la cantidad de filas que cumplen con la condición
+
+            lblETLErrors.Text = lblETLErrors.Text + errorsCount.ToString();
+
+
         }
 
 
@@ -457,8 +484,6 @@ namespace ETL_Manager
             lineChart.ChartAreas[0].AxisX.TitleFont = new Font("Arial", 12, FontStyle.Bold); // Establecer fuente y tamaño
             lineChart.ChartAreas[0].AxisY.TitleFont = new Font("Arial", 12, FontStyle.Bold); // Establecer fuente y tamaño
 
-
-
             lineChart.Series["ETL Execution Time"].Color = Color.Blue;
             lineChart.Series["ETL Execution Time"].BorderWidth = 2;
             lineChart.Series["ETL Execution Time"].MarkerStyle = MarkerStyle.Circle;
@@ -486,12 +511,7 @@ namespace ETL_Manager
             this.FillBarChart_TableGrowth1();
             this.fillDataGridViewETLValidation();
             this.FilldGVRowDifference();
-
-
-
         }
-
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -600,7 +620,7 @@ namespace ETL_Manager
                 return; // No aplica el cambio de color para la última fila en blanco en modo de edición
             }
             // Verifica si el valor de la columna "Validation" en la fila actual es 0
-            if (Convert.ToInt32(dGV_RowDifference.Rows[e.RowIndex].Cells[3].Value) != 0)
+            if (Convert.ToInt32(dGV_RowDifference.Rows[e.RowIndex].Cells[3].Value) != 0 || Convert.ToInt32(dGV_RowDifference.Rows[e.RowIndex].Cells[4].Value) != 0)
             {
                 // Cambia el color de fondo de toda la fila a rojo
                 dGV_RowDifference.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
